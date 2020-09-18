@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import { Navbar, Nav } from 'react-bootstrap'
 
 const authenticatedOptions = (
   <Fragment>
+    <Nav.Link href="#wishlists">Wish Lists</Nav.Link>
+    <Nav.Link href="#wishlist-create">Add Wish List</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
