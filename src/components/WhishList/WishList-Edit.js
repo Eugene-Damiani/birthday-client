@@ -4,6 +4,7 @@ import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Layout from '../Layout'
 
 const WishListEdit = props => {
   const [wishList, setWishList] = useState({ name: '', dob: '', item: '', price: '', location: '' })
@@ -15,15 +16,19 @@ const WishListEdit = props => {
         'Authorization': `Token token=${props.user.token}`
       }
     })
-      .then(res => setWishList(res.data.wishlist))
+      .then(res => {
+        console.log(res.data)
+        setWishList(res.data.wishlist)
+      })
       .catch(console.error)
-  })
+  }, [])
 
   const handleChange = event => {
+    console.log(wishList)
     event.persist()
     setWishList(prevWishList => {
       const updatedField = { [event.target.name]: event.target.value }
-      const editedWishList = Object.assign({}, prevWishList.wishList, updatedField)
+      const editedWishList = Object.assign({}, prevWishList, updatedField)
       return editedWishList
     })
   }
@@ -31,12 +36,12 @@ const WishListEdit = props => {
     event.preventDefault()
 
     axios({
-      url: `${apiUrl}/wishlists${props.match.params.id}`,
+      url: `${apiUrl}/wishlists/${props.match.params.id}`,
       headers: {
         'Authorization': `Token token=${props.user.token}`
       },
       method: 'PATCH',
-      data: { wishList }
+      data: { wishlist: wishList }
     })
       .then(() => setUpdated(true))
       .catch(console.error)
@@ -46,9 +51,10 @@ const WishListEdit = props => {
   }
 
   const { name, dob, item, price, location } = wishList
+  console.log('we are here')
 
   return (
-    <React.Fragment>
+    <Layout>
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
           <h3> Edit Wish List</h3>
@@ -116,7 +122,7 @@ const WishListEdit = props => {
           </Form>
         </div>
       </div>
-    </React.Fragment>
+    </Layout>
   )
 }
 
