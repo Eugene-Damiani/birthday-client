@@ -12,6 +12,7 @@ import WishListCreate from '../WhishList/WishListCreate'
 import WishLists from '../WhishList/WishList-Index'
 import WishList from '../WhishList/WishList-Show'
 import WishListEdit from '../WhishList/WishList-Edit'
+import Home from '../Home.js'
 
 class App extends Component {
   constructor () {
@@ -46,6 +47,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <Home />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
