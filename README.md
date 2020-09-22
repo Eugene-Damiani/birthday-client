@@ -5,9 +5,11 @@ The purpose of this app is to provide a single place for users to keep track of 
 
 ## Repo Links
 
-Client Link: https://github.com/Eugene-Damiani/birthday-client/edit/master/README.md
-API Link: https://github.com/Eugene-Damiani/birthday-api
-Deployed Link: https://sheltered-lowlands-65291.herokuapp.com
+<ul>
+  <li> Client Link: https://github.com/Eugene-Damiani/birthday-client/edit/master/README.md </li>
+  <li> API Link: https://github.com/Eugene-Damiani/birthday-api </li>
+  <li> Deployed Link: https://sheltered-lowlands-65291.herokuapp.com </li>
+</ul>
 
 
 
