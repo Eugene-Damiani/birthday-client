@@ -1,7 +1,14 @@
 
-# Birthday Tracker Planing
+# Birthday Reminder Planing
 
 The purpose of this app is to provide a single place for users to keep track of birthdays and purchase gifts for the people closest to the user. Future verisons will include wish list for specail events for items to bring to the event.
+
+## Repo Links
+
+Client Link: https://github.com/Eugene-Damiani/birthday-client/edit/master/README.md
+API Link: https://github.com/Eugene-Damiani/birthday-api
+Deployed Link: https://sheltered-lowlands-65291.herokuapp.com
+
 
 
 ## User Story
