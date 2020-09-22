@@ -44,5 +44,5 @@ Verison 1
 The plan for this project was to gain an understanding of hooks and how to implement them in an application. I created schedule of each day and what needed to get done before I shutdown my laptop. There were a few issues that had me fall behind and not reach my stretch goals. 1. Was gaining proficiency on how to use hooks 2. I had issues with running my curl-scripts because of permission issue that ended up being solved by using the chmod command. 3. The time it take to read through documentation to be able to implement additional features.
 
 ## WireFrame and Home Page
-
-https://sheltered-lowlands-65291.herokuapp.com
+![Screen Shot 2020-09-22 at 5 35 29 AM](https://user-images.githubusercontent.com/65584864/93882786-8c284f00-fc95-11ea-9526-6818094ccc28.png)
+![Uploading Screen Shot 2020-09-22 at 3.56.16 AM.png…]()
