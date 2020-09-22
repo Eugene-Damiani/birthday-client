@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import apiUrl from '../../apiConfig'
+import messages from '../AutoDismissAlert/messages'
 
 const WishListCreate = props => {
   const [createdWishListId, setCreatedWishListId] = useState(null)
@@ -20,6 +21,7 @@ const WishListCreate = props => {
 
   const handleSubmit = event => {
     event.preventDefault()
+    const { msgAlert } = props
     axios({
       url: `${apiUrl}/wishlists`,
       method: 'POST',
@@ -29,7 +31,17 @@ const WishListCreate = props => {
       }
     })
       .then(res => setCreatedWishListId(res.data.wishlist._id))
+      .then(() => msgAlert({
+        heading: 'Looking 100',
+        message: messages.wishListCreateSuccess,
+        variant: 'Looking Good!'
+      }))
       .catch(console.error)
+      .catch(() => msgAlert({
+        heading: 'Sorry 5000 Try Again',
+        message: messages.wishListCreateFailure,
+        variant: ':\'('
+      }))
   }
   if (createdWishListId) {
     return <Redirect to={`/wishlists/${createdWishListId}`} />
