@@ -46,5 +46,7 @@ The plan for this project was to gain an understanding of hooks and how to imple
 ## WireFrame and Home Page
 ![Screen Shot 2020-09-22 at 5 35 29 AM](https://user-images.githubusercontent.com/65584864/93882786-8c284f00-fc95-11ea-9526-6818094ccc28.png)
 
+![Screen Shot 2020-09-22 at 5 43 38 AM](https://user-images.githubusercontent.com/65584864/93883584-9bf46300-fc96-11ea-9607-7af81cb9b389.png)
+
 <img width="1436" alt="Screen Shot 2020-09-22 at 3 56 16 AM" src="https://user-images.githubusercontent.com/65584864/93883012-ceea2700-fc95-11ea-9ebe-7b2b28db3e52.png">
 
