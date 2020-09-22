@@ -5,6 +5,7 @@ import apiUrl from '../../apiConfig'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Layout from '../Layout'
+import messages from '../AutoDismissAlert/messages'
 
 const WishListEdit = props => {
   const [wishList, setWishList] = useState({ name: '', dob: '', item: '', price: '', location: '' })
@@ -34,7 +35,7 @@ const WishListEdit = props => {
   }
   const handleSubmit = event => {
     event.preventDefault()
-
+    const { msgAlert } = props
     axios({
       url: `${apiUrl}/wishlists/${props.match.params.id}`,
       headers: {
@@ -44,7 +45,17 @@ const WishListEdit = props => {
       data: { wishlist: wishList }
     })
       .then(() => setUpdated(true))
+      .then(() => msgAlert({
+        heading: 'Updated!!',
+        message: messages.editSuccess,
+        variant: 'Good As New!'
+      }))
       .catch(console.error)
+      .catch(() => msgAlert({
+        heading: 'Still Old',
+        message: messages.editFailure,
+        variant: 'Try Again'
+      }))
   }
   if (updated) {
     return <Redirect to={`/wishlists/${props.match.params.id}`} />
