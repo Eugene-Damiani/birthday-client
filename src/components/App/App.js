@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -8,6 +8,11 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import WishListCreate from '../WhishList/WishListCreate'
+import WishLists from '../WhishList/WishList-Index'
+import WishList from '../WhishList/WishList-Show'
+import WishListEdit from '../WhishList/WishList-Edit'
+import Home from '../Home.js'
 
 class App extends Component {
   constructor () {
@@ -42,6 +47,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <Home />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
@@ -54,10 +62,22 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
+          <AuthenticatedRoute user={user} exact path='/wishlist-create' render={() => (
+            <WishListCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/wishlists' render={() => (
+            <WishLists msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/wishlists/:id/edit' render={(navProps) => (
+            <WishListEdit {...navProps} msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/wishlists/:id' render={(navProps) => (
+            <WishList {...navProps} msgAlert={this.msgAlert} user={user} />
+          )} />
         </main>
       </Fragment>
     )
   }
 }
 
-export default App
+export default withRouter(App)
