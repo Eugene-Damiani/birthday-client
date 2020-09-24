@@ -18,14 +18,12 @@ const WishListEdit = props => {
       }
     })
       .then(res => {
-        console.log(res.data)
         setWishList(res.data.wishlist)
       })
       .catch(console.error)
   }, [])
 
   const handleChange = event => {
-    console.log(wishList)
     event.persist()
     setWishList(prevWishList => {
       const updatedField = { [event.target.name]: event.target.value }
@@ -62,7 +60,6 @@ const WishListEdit = props => {
   }
 
   const { name, dob, item, price, location } = wishList
-  console.log('we are here')
 
   return (
     <Layout>
