@@ -10,6 +10,13 @@ The purpose of this app is to provide a single place for users to keep track of 
 - [Deployed API](https://sheltered-lowlands-65291.herokuapp.com)
 - [API Repo](https://github.com/Eugene-Damiani/birthday-api)
 
+## Set Up & Installation
+1. Fork and clone this repository.
+2. Run npm install, npm install moment --save, and npm install mdbreact.
+3. Checkout to a new branch.
+4. Run the development server with npm start.
+
+
 ## User Story
 
 The user will be able to store friend's birthday and keep track of the gift they want to get them.
