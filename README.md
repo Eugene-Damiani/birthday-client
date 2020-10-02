@@ -3,15 +3,12 @@
 
 The purpose of this app is to provide a single place for users to keep track of birthdays and purchase gifts for the people closest to the user. Future verisons will include wish list for specail events for items to bring to the event.
 
-## Repo Links
+## Important Links
 
-<ul>
-  <li> Client Repo: https://github.com/Eugene-Damiani/birthday-client </li>
-  <li> API Repo: https://github.com/Eugene-Damiani/birthday-api </li>
-  <li> Deployed App: https://sheltered-lowlands-65291.herokuapp.com </li>
-</ul>
-
-
+- [Deployed Client](https://eugene-damiani.github.io/birthday-client/)
+- [Client Repo](https://github.com/Eugene-Damiani/birthday-client)
+- [Deployed API](https://sheltered-lowlands-65291.herokuapp.com)
+- [API Repo](https://github.com/Eugene-Damiani/birthday-api)
 
 ## User Story
 
@@ -38,6 +35,16 @@ Verison 1
 - Able to create events and a list that is needed for the events
 - Name change and design
 
+### Catalog of Routes
+
+Verb         |	URI Pattern
+------------ | -------------
+GET | /wishlits
+GET | /wishlists/:id
+POST | /wishlists
+PATCH | /wishlists/:id/edit
+DELETE | /wishlists/:id
+
 
 ## Planning
 
@@ -49,4 +56,3 @@ The plan for this project was to gain an understanding of hooks and how to imple
 ![Screen Shot 2020-09-22 at 5 43 38 AM](https://user-images.githubusercontent.com/65584864/93883584-9bf46300-fc96-11ea-9607-7af81cb9b389.png)
 
 <img width="1436" alt="Screen Shot 2020-09-22 at 3 56 16 AM" src="https://user-images.githubusercontent.com/65584864/93883012-ceea2700-fc95-11ea-9ebe-7b2b28db3e52.png">
-
