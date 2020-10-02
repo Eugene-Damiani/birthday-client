@@ -17,7 +17,7 @@ The user will be able to store friend's birthday and keep track of the gift they
 Verison 1
 - user will be able to sign-up, sign-in and, sign-out.
 - user will be able to track birthday's of friends and loved ones.
-- user will be able to CRUD Wishlist items
+- user will be able to CRUD Wishlist items.
 
 ## Technology Used
 - MondoDB
